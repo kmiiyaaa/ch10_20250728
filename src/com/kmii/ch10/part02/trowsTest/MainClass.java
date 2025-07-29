@@ -40,7 +40,9 @@ public class MainClass {
 			e.printStackTrace();
 		} finally {
 			try {
+				if(conn != null) { //커넥션 존재 할때만 닫기
 				conn.close();
+				}
 			} catch (SQLException e) {
 				// TODO: handle exception
 				e.printStackTrace();
